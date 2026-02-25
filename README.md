@@ -1,7 +1,7 @@
 # cpp_web
 c++ website just for the shits and giggles
 
-![alt text](image.png)
+![alt text](showcase/image.png)
 
 website built with a language meant to control nuclear plants btw
 
