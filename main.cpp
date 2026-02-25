@@ -1,5 +1,6 @@
 #include "httplib.h"
-using namespace httplib;
+using namespace httplib; // i know that only npcs use `using namespace ...`
+                         // but because im learning httplib ill use this FOR NOW
 
 int main()
 {
