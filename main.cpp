@@ -31,14 +31,11 @@ int main()
         app.Get("/api/user", [](const Request &, Response &res)
                 { res.set_content(
                       R"({"id":1,"name":"mike","status":"the goat"})",
-                      "application/json"
-                );
-        });
+                      "application/json"); });
 
         // echo json post
         app.Post("/api/echo", [](const Request &req, Response &res)
-                 { res.set_content(req.body, "application/json");
-                });
+                 { res.set_content(req.body, "application/json"); });
 
         // query param
         //      example: /api/hello?name=lads
