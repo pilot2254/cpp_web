@@ -2,8 +2,12 @@
 
 #include "httplib.h"
 #include <string>
-using namespace httplib; // i know that only npcs use `using namespace ...`
-                         // but because im learning httplib ill use this FOR NOW
+
+// using namespace httplib;
+//      im not an npc to use ts bruh
+
+// i built this because im mentally crazy
+// https://open.spotify.com/track/69NExquLGvLHGyb3yj26DH?si=a424c117109847d6
 
 /*
 // old
@@ -21,25 +25,25 @@ int main()
 
 int main()
 {
-        Server app;
+        httplib::Server app;
 
         // root
-        app.Get("/", [](const Request &, Response &res)
+        app.Get("/", [](const httplib::Request &, httplib::Response &res)
                 { res.set_content("cpp backend alive", "text/plain"); });
 
         // very real api route
-        app.Get("/api/user", [](const Request &, Response &res)
+        app.Get("/api/user", [](const httplib::Request &, httplib::Response &res)
                 { res.set_content(
                       R"({"id":1,"name":"mike","status":"the goat"})",
                       "application/json"); });
 
         // echo json post
-        app.Post("/api/echo", [](const Request &req, Response &res)
+        app.Post("/api/echo", [](const httplib::Request &req, httplib::Response &res)
                  { res.set_content(req.body, "application/json"); });
 
         // query param
         //      example: /api/hello?name=lads
-        app.Get("/api/hello", [](const Request &req, Response &res)
+        app.Get("/api/hello", [](const httplib::Request &req, httplib::Response &res)
                 {
         std::string name = req.get_param_value("name");
         res.set_content("hello " + name, "text/plain"); });
