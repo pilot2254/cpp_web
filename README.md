@@ -20,3 +20,5 @@ How to use?
    - `localhost:8080/api/hello?name=lads`
 3. test in powershell
    - `curl.exe -X POST http://localhost:8080/api/echo -H "Content-Type: application/json" -d '{\"msg\":\"yo\"}'`
+
+   hjfwhjerbuRBO3R2HOU
